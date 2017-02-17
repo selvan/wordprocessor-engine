@@ -1,0 +1,55 @@
+{
+  "name": "wordprocessor-engine",
+  "version": "0.0.2",
+  "description": "Virtual wordprocessor engine",
+  "repository": "https://www.github.com/selvan/wordprocessor-engine.git",
+  "main": "lib/Wordprocessor.js",
+  "dependencies": {
+    "acorn-jsx": "^2.0.0",
+    "fbemitter": "^2.0.0",
+    "grapheme-splitter": "selvan/grapheme-splitter",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.0.0",
+    "object-assign": "^4.0.1",
+    "seqgen": "selvan/seqgen"
+  },
+  "devDependencies": {
+    "babel-jest": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-0": "*",
+    "babelify": "*",
+    "browserify": "*",
+    "envify": "*",
+    "jest-cli": "*",
+    "uglify-js": "*",
+    "watchify": "*"
+  },
+  "scripts": {
+    "start": "watchify -o dist/bundle.js -t [ babelify ] -v -d lib/Wordprocessor.js",
+    "build": "NODE_ENV=production browserify -t [ babelify ] . | uglifyjs -cm > dist/bundle.min.js",
+    "test": "jest"
+  },
+  "author": "Selvan",
+  "browserify": {
+    "transform": [
+      "envify",
+      "babelify"
+    ]
+  },
+  "jest": {
+    "rootDir": "./lib",
+    "scriptPreprocessor": "./../node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "./../node_modules/react"
+    ],
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  }
+}
