@@ -1,6 +1,8 @@
 ## About
 Virtual wordprocessor engine that runs in mobile (React native), web browser(Javascript) and server (Nodejs)
 
+For virtual calc engine: https://www.github.com/selvan/calc-engine
+
 ## Features
 * Support for Cut/Copy/Paste
 * Support for Undo/Redo
@@ -56,7 +58,7 @@ See lib/wordprocessor/node/container/__tests__/containernode for details on thes
 
 ### Predorming Undo/Redo
     See lib/wordprocessor/__tests__/UndoManager-test.js
-    
+
 ### Creating List items
     See /lib/wordprocessor/visitor/__tests__/ListStyleVisitor-test.js
 
