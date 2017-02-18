@@ -54,6 +54,9 @@ See lib/wordprocessor/node/container/__tests__/containernode for details on thes
 ### Performing Paste
     See /lib/wordprocessor/visitor/__tests__/PasteVisitor-test.js
 
+### Predorming Undo/Redo
+    See lib/wordprocessor/__tests__/UndoManager-test.js
+    
 ### Creating List items
     See /lib/wordprocessor/visitor/__tests__/ListStyleVisitor-test.js
 
@@ -65,9 +68,6 @@ See lib/wordprocessor/node/container/__tests__/containernode for details on thes
 
 ### Delete bunch of Nodes
     See /lib/wordprocessor/visitor/__tests__/DeleteVisitor-test.js
-
-### Predorming Undo/Redo
-    See lib/wordprocessor/__tests__/UndoManager-test.js
 
 ### Performing Serialization and Deserialization
     See /lib/wordprocessor/__tests__/Deserializer-test.js
